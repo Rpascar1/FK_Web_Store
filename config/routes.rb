@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  get 'hello_world', to: 'hello_world#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  post 'shopping_cart/add'
+  resources :products
+  root to: 'products#index'
 end
